@@ -18,19 +18,17 @@ import (
 
 func main() {
 	var (
-		a       int
-		fib_1   = 1
-		fib_2   = 1
-		counter = 2
+		a     int
+		fib_1 = 1
+		fib_2 = 1
 	)
 	fmt.Scan(&a)
 
 	for i := 0; i < a; i++ {
 		fib_2 = fib_1 + fib_2
 		fib_1 = fib_2 - fib_1
-		counter++
 		if fib_2 == a {
-			fmt.Printf("%d ", counter)
+			fmt.Printf("%d ", i+3)
 			break
 		} else if fib_2 > a {
 			fmt.Print(-1)
